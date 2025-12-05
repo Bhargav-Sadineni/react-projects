@@ -5,18 +5,26 @@ import './App.css'
 
 function App() {
 
-  let [counter,bhargavCounter]=useState(15)
+  let [counter,setCounter]=useState(15)
 
   //let counter = 15
   const addvalue=()=>{
     console.log("clicked",counter);
    //counter = counter+1
-   //setCounter(counter+1)
-   counter=counter+1
-   bhargavCounter(counter)
+   /*setCounter(counter+1)
+   setCounter(counter+1)
+   setCounter(counter+1)
+   setCounter(counter+1)*/
+
+   setCounter(prevCounter=>prevCounter+1)
+   setCounter(prevCounter=>prevCounter+1)
+   setCounter(prevCounter=>prevCounter+1)
+   setCounter(prevCounter=>prevCounter+1)
+   //counter=counter+1
+   //bhargavCounter(counter)
   }
   const removevalue=()=>{
-    bhargavCounter(counter-1)
+    setCounter(counter-1)
   }
   return (
     <>
